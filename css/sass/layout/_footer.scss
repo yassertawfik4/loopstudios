@@ -1,0 +1,39 @@
+@use './variables' as *;
+
+.footer{
+    margin-top: 100px;
+    background-color: $Black;
+    color: $White;
+    padding-top: 30px;
+}
+.footer ul{
+    padding-left: 0;
+}
+.footer ul li{
+    cursor: pointer;
+}
+.footer h1{
+    margin-bottom: 30px;
+}
+.footer .icons span{
+    font-size: 25px;
+    margin-left: 20px;
+}
+.footer p{
+    color: $DarkGray;
+}
+@media (max-width:767px) {
+    .footer .footerbox{
+        flex-direction: column;
+    }
+    .footer ul{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: block !important;
+        text-align: center;
+    }
+    .footer ul li{
+        margin-right: 0 !important;
+        margin-top: 15px;
+    }
+}

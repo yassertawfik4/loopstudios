@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif !important;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.home .mainlist {
+  position: fixed;
+  width: 350px;
+  height: 100%;
+  right: 0;
+  margin-right: -500px;
+  top: 0;
+  transition: 0.4s;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  z-index: 1;
+}
+
+.home .activeright .cancelicon {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 26px;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.home .mainlist .listinfo {
+  padding-left: 0;
+  text-align: center;
+}
+
+.home .mainlist .listinfo li {
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.home .mainlist .listinfo li::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  background-color: hsl(0, 0%, 100%);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.4s;
+}
+
+.home .mainlist .listinfo li:hover::before {
+  width: 50px;
+}
+
+.activeright {
+  margin-right: 0 !important;
+}
+
+.about {
+  margin-top: 100px;
+}
+
+.about .row p {
+  margin-top: 22px;
+  line-height: 1.6rem;
+  letter-spacing: 0.04rem;
+  color: hsl(0, 0%, 55%);
+}
+
+@media (max-width: 991px) {
+  .about .row {
+    text-align: center;
+  }
+  .about .row h1 {
+    font-size: 50px;
+  }
+}
+.create {
+  margin-top: 100px;
+}
+
+.create .btn {
+  border: 1px solid hsl(0, 0%, 0%);
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.create .branchbtn {
+  display: none !important;
+}
+
+.create .btn:hover {
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+}
+
+@media (max-width: 767px) {
+  .create .createtitle .btn {
+    display: none;
+  }
+  .create .createtitle {
+    justify-content: center !important;
+  }
+  .create .branchbtn {
+    display: flex !important;
+  }
+}
+.footer {
+  margin-top: 100px;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  padding-top: 30px;
+}
+
+.footer ul {
+  padding-left: 0;
+}
+
+.footer ul li {
+  cursor: pointer;
+}
+
+.footer h1 {
+  margin-bottom: 30px;
+}
+
+.footer .icons span {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.footer p {
+  color: hsl(0, 0%, 55%);
+}
+
+@media (max-width: 767px) {
+  .footer .footerbox {
+    flex-direction: column;
+  }
+  .footer ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block !important;
+    text-align: center;
+  }
+  .footer ul li {
+    margin-right: 0 !important;
+    margin-top: 15px;
+  }
+}
+/*start home*/
+.home {
+  background-image: url("../image/desktop/image-hero.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* start nav*/
+.home .navbarbox {
+  font-size: 18px;
+  font-weight: 500;
+  padding-top: 23px;
+}
+
+.home .navbarbox {
+  color: hsl(0, 0%, 100%);
+}
+
+.home .navbarbox ul li {
+  cursor: pointer;
+  position: relative;
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.home .navbarbox ul li::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  bottom: 0;
+  background-color: hsl(0, 0%, 100%);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.4s;
+}
+
+.home .navbarbox ul li:hover::before {
+  width: 50px;
+}
+
+/* end nav*/
+.home .row {
+  margin-top: 150px;
+  padding: 20px;
+}
+
+.home .row .box {
+  border: 1px solid hsl(0, 0%, 100%);
+}
+
+.home .row h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 50px;
+  padding: 22px;
+  margin: 0;
+}
+
+.home .navbarbox .list {
+  opacity: 0;
+  transition: 0.4s;
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .home .navbarbox ul li {
+    opacity: 0;
+    display: none;
+  }
+  .home .navbarbox .list {
+    opacity: 1;
+    display: block;
+  }
+  .home {
+    background-image: url(../image/mobile/image-hero.jpg);
+  }
+}
+@media (max-width: 438px) {
+  .home .row h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 40px;
+    padding: 15px;
+    margin: 0;
+  }
+}
+/* end home*//*# sourceMappingURL=style.css.map */

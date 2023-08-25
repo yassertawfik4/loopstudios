@@ -1,0 +1,47 @@
+@use "./variables" as *;
+.home .mainlist {
+  position: fixed;
+  width: 350px;
+  height: 100%;
+  right: 0;
+  margin-right: -500px;
+  top: 0;
+  transition: 0.4s;
+  background-color: $Black;
+  color: $White;
+  z-index: 1;
+}
+.home .activeright .cancelicon {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 26px;
+  color: $White;
+  cursor: pointer;
+}
+.home .mainlist .listinfo {
+  padding-left: 0;
+  text-align: center;
+}
+.home .mainlist .listinfo li {
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.home .mainlist .listinfo li::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  background-color: $White;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.4s;
+}
+.home .mainlist .listinfo li:hover::before {
+  width: 50px;
+}
+.activeright {
+  margin-right: 0 !important;
+}

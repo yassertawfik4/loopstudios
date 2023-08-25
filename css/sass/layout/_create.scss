@@ -1,0 +1,29 @@
+@use './variables' as *;
+.create{
+    margin-top: 100px;
+}
+.create .btn{
+    border:1px solid $Black;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.create .branchbtn{
+    display: none !important;
+}
+.create .btn:hover{
+   background-color: $Black;
+   color: $White;
+}
+@media (max-width:767px) {
+    .create .createtitle .btn{
+        display: none;
+    }
+    .create .createtitle{
+        justify-content: center !important;
+    }
+    .create .branchbtn{
+        display: flex !important;
+    }
+}

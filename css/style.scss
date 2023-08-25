@@ -1,0 +1,96 @@
+@use './sass/layout/global-rules';
+
+@use './sass//layout/mainlist';
+
+@use './sass/layout/variables' as *;
+
+@use './sass/layout/about';
+
+@use './sass/layout/create';
+
+@use './sass/layout/footer';
+/*start home*/
+.home {
+  background-image: url($imageurl);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+/* start nav*/
+
+
+.home .navbarbox {
+  font-size: 18px;
+  font-weight: 500;
+  padding-top: 23px;
+}
+
+.home .navbarbox {
+  color: $White;
+}
+.home .navbarbox ul li {
+    cursor: pointer;
+    position: relative;
+    transition: 0.4s;
+    opacity: 1;
+}
+.home .navbarbox ul li::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  bottom: 0;
+  background-color: $White;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.4s;
+}
+.home .navbarbox ul li:hover::before {
+  width: 50px;
+}
+/* end nav*/
+.home .row {
+  margin-top: 150px;
+  padding: 20px;
+}
+.home .row .box {
+  border: 1px solid $White;
+}
+.home .row h1 {
+  color: $White;
+  font-size: 50px;
+  padding: 22px;
+  margin: 0;
+}
+.home .navbarbox .list{
+    opacity: 0;
+    transition: 0.4s;
+    display: none;
+    font-size: 30px;
+    cursor:pointer;
+}
+$max_width:'max-width: 767px';
+@media ($max_width) {
+    .home .navbarbox ul li{
+        opacity: 0;
+        display: none;
+    }
+    .home .navbarbox .list{
+        opacity: 1;
+        display: block;
+    }
+    .home{
+        background-image: url(../image/mobile/image-hero.jpg);
+    }
+}
+@media (max-width:438px) {
+    .home .row h1 {
+        color: $White;
+        font-size: 40px;
+        padding: 15px;
+        margin: 0;
+      }
+}
+/* end home*/
